@@ -6,8 +6,18 @@
 
 
 
-// Given ab array of numbers and a given target. return the target if it's in the array or undefined if it's not
+// Given an array of numbers and a given target. return the target if it's in the array or undefined if it's not
 
+function findTarget(arr, target) {
+    for (let num of arr) {
+        if (num === target) {
+            return target
+        }
+    }
+}
+
+console.log(findTarget([1, 2, 3, 4, 5], 5))
+console.log(findTarget([1, 2, 3, 4, 5],15))
 
 
 // Given an array of numbers, return the first number that's bigger than 14 or undefined if no number is bigger than 14
