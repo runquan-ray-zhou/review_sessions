@@ -15,6 +15,8 @@ function findTarget(arr, target) {
         }
     }
     return undefined;
+
+    // return arr.find((num) => num === target);
 }
 
 console.log(findTarget([1, 2, 3, 4, 5], 5))
@@ -29,6 +31,7 @@ function findBiggerThanFourteen(arr) {
             return num
         }
     }
+    return undefined;
 }
 
 console.log(findBiggerThanFourteen([11, 12, 13, 14, 15]))
@@ -42,6 +45,7 @@ function findStringLengthGreaterThanFour (arr) {
             return str
         }
     }
+    return undefined;
 }
 
 console.log(findStringLengthGreaterThanFour(["one", "two", "three", "four", "five"]))
