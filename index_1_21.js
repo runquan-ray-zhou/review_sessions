@@ -22,7 +22,16 @@ console.log(findTarget([1, 2, 3, 4, 5],15))
 
 // Given an array of numbers, return the first number that's bigger than 14 or undefined if no number is bigger than 14
 
+function findBiggerThanFourteen(arr) {
+    for (let num of arr) {
+        if (num > 14) {
+            return num
+        }
+    }
+}
 
+console.log(findBiggerThanFourteen([11, 12, 13, 14, 15]))
+console.log(findBiggerThanFourteen([1, 2, 3, 4, 5]))
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
 
