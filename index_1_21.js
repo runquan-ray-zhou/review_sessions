@@ -35,6 +35,16 @@ console.log(findBiggerThanFourteen([1, 2, 3, 4, 5]))
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
 
+function findStringLengthGreaterThanFour (arr) {
+    for (let str of arr) {
+        if (str.length > 4) {
+            return str
+        }
+    }
+}
+
+console.log(findStringLengthGreaterThanFour(["one", "two", "three", "four", "five"]))
+console.log(findStringLengthGreaterThanFour(["six", "seven", "eight", "nine", "ten" ]))
 
 
 // Given an array of Objects and a target id return the first object that matches the id or undefined if no such object is found
