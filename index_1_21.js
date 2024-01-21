@@ -11,9 +11,10 @@
 function findTarget(arr, target) {
     for (let num of arr) {
         if (num === target) {
-            return target
+            return num;
         }
     }
+    return undefined;
 }
 
 console.log(findTarget([1, 2, 3, 4, 5], 5))
