@@ -67,7 +67,63 @@ console.log(findStringLengthGreaterThanFour(["six", "seven", "eight", "nine", "t
 }
 */
 
+function returnFirstObject (arr, id) {
 
+    return arr.find(obj => obj.id === id)
+
+}
+
+console.log(returnFirstObject([
+    {
+    id: "A84D_c",
+    name: "Roy",
+    occupation: "Driver",
+    eyeColor: "brown"
+   },
+   {
+    id: "Y42C_a",
+    name: "Robert",
+    occupation: "Chef",
+    eyeColor: "green"
+   },
+   {
+    id: "Z55W_d",
+    name: "Rose",
+    occupation: "Dancer",
+    eyeColor: "blue"
+   },
+   {
+    id: "K10R_e",
+    name: "Rodney",
+    occupation: "Teacher",
+    eyeColor: "brown"
+   }], "Z55W_d"))
+
+   console.log(returnFirstObject([
+    {
+    id: "A84D_c",
+    name: "Roy",
+    occupation: "Driver",
+    eyeColor: "brown"
+   },
+   {
+    id: "Y42C_a",
+    name: "Robert",
+    occupation: "Chef",
+    eyeColor: "green"
+   },
+   {
+    id: "Z55W_d",
+    name: "Rose",
+    occupation: "Dancer",
+    eyeColor: "blue"
+   },
+   {
+    id: "K10R_e",
+    name: "Rodney",
+    occupation: "Teacher",
+    eyeColor: "brown"
+   }], "U51O_p"))
 // Given an array of objects and a target id return a new object with only the name. The structure for a single object in the array would be as the one above. The returned object would look like this - 
 /*
 {
