@@ -153,11 +153,26 @@ function returnName (arr, id) {
 
     for (let obj of arr) {
         if(obj.id === id){
-            return { "name" : obj.name }
+            return { name : obj.name }
         }
     }
+    // for (let obj of arr) {
+    //     if (obj.id === id) {
+    //         const { name } = obj
+    //         return name
+    //     }
+    // }
 
+    // const obj = arr.find((object) => object.id === targetId);
+
+    // if(obj) {
+    //     return {
+    //         name: obj.name,
+    //     };
+    // }
 }
+
+
 
 console.log(returnName([
     {
