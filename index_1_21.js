@@ -41,7 +41,7 @@ console.log(findBiggerThanFourteen([1, 2, 3, 4, 5]))
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
 
-function findStringLengthGreaterThanFour (arr) {
+function findStringLengthGreaterThanFour(arr) {
     // for (let str of arr) {
     //     if (str.length > 4) {
     //         return str
@@ -49,7 +49,7 @@ function findStringLengthGreaterThanFour (arr) {
     // }
     // return undefined;
 
-    return arr.find(num => num.length > 4)
+    return arr.find(str => str.length > 4)
 }
 
 console.log(findStringLengthGreaterThanFour(["one", "two", "three", "four", "five"]))
@@ -66,6 +66,22 @@ console.log(findStringLengthGreaterThanFour(["six", "seven", "eight", "nine", "t
  eyeColor: "green"
 }
 */
+
+const arrayOfObjects = [
+    { id: "A84D_c", name: "Roy", occupation: "Driver", eyeColor: "brown" },
+    { id: "B92F_d", name: "Alice", occupation: "Teacher", eyeColor: "blue" },
+    { id: "C73E_a", name: "Bob", occupation: "Engineer", eyeColor: "green" },
+    { id: "D61A_b", name: "Eva", occupation: "Doctor", eyeColor: "hazel" },
+    { id: "E58B_f", name: "Charlie", occupation: "Artist", eyeColor: "gray" },
+    { id: "F49C_e", name: "Grace", occupation: "Chef", eyeColor: "amber" },
+    { id: "G37D_g", name: "David", occupation: "Scientist", eyeColor: "blue" },
+    { id: "H25E_h", name: "Sophie", occupation: "Writer", eyeColor: "green" },
+    { id: "I14F_i", name: "Oliver", occupation: "Musician", eyeColor: "brown" },
+    { id: "J03G_j", name: "Emma", occupation: "Athlete", eyeColor: "hazel" }
+];
+
+
+
 
 function returnFirstObject (arr, id) {
 
