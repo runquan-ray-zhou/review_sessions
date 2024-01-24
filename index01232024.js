@@ -92,7 +92,7 @@ function formatGreeting(obj) {
 function returnGreeting(arr, id) {
     for (let obj of arr) {
         if(obj.id === id)
-        return `Hello ${obj.firstName} ${obj.lastName}, have a great day at your job as a ${obj.occupation}`
+        return formatGreeting(obj)
     }
 }
 
