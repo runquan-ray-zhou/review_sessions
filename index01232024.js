@@ -57,10 +57,10 @@ function formatGreeting(obj) {
 
 }
   
-//   console.log(formatGreeting(john) === "Hello John Klaus, have a great day at your job as a Carpenter")
-console.log(formatGreeting(john))
-//   console.log(formatGreeting(rebecca) === "Hello Rebecca Cohen, have a great day at your job as a Teacher")
-console.log(formatGreeting(rebecca))
+  console.log(formatGreeting(john) === "Hello John Klaus, have a great day at your job as a Carpenter")
+// console.log(formatGreeting(john))
+  console.log(formatGreeting(rebecca) === "Hello Rebecca Cohen, have a great day at your job as a Teacher")
+// console.log(formatGreeting(rebecca))
   
   // 3.----------------------------------
   // Write a function that takes an array of objects and a targetId and returns a formatted string. Each object in the array will have the same structure as the objects from the previous question plus an id. Use chatGPT to create an array of 10 such objects.
