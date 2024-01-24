@@ -6,14 +6,29 @@ function capitalizeWord(str) {
     for (let i = 0; i < str.length; i++) {
         newStr +=str[i]
     }
-    return newStr[0].toUpperCase() + newStr.slice(1)
+    return newStr[0].toUpperCase() + newStr.slice(1).toLowerCase()
 }
 
 function capitalizeEveryWord(str) {
     let newString = str.split(" ")
-    return newString.map(word => word[0].toUpperCase() + word.slice(1)).join(" ")
+    return newString.map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(" ")
     
+//return str
+//      .split(" ")
+//      .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(" ")
+//      .join(" ")
 }
+
+
+// function capitalizeEveryWords (str) {
+//     const words = str.split(" ");
+    
+//     for (let i = 0; i < words.length; i++) {
+//         const word = words[i];
+//         words[i] = word[0].toUpperCase() + word.slice(1).toLowerCase();
+//     }
+//     return words.join(" ")
+// }
 
 console.log(capitalizeWord("carpenter"))
 console.log(capitalizeEveryWord("tim the tool man taylor"))
