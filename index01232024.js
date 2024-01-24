@@ -51,6 +51,12 @@ const john = {
     occupation: "Teacher"
   }
 
+// function formatGreeting ({ firstName, lastName, occupation }) {
+
+//     return `Hello ${firstName} ${lastName}, have a great day at your job as a ${occupation}`
+
+// }
+
 function formatGreeting(obj) {
 
     return `Hello ${obj.firstName} ${obj.lastName}, have a great day at your job as a ${obj.occupation}`
