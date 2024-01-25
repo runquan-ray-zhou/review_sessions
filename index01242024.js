@@ -242,11 +242,13 @@ console.log(returnDinoValue(    {
 
 function returnBoolean(dinoObj, mya) {
 
-  if (dinoObj.mya.length === 1) {
-    return dinoObj.mya === mya
-  } else {
-    return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
-  }
+  // if (dinoObj.mya.length === 1) {
+  //   return dinoObj.mya === mya
+  // } else {
+  //   return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
+  // }
+
+  return dinoObj.mya.length === 1 ? dinoObj.mya === mya : dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
 
 }
 
@@ -260,7 +262,7 @@ console.log(returnBoolean(    {
   period: "Early Cretaceous",
   mya: [112, 100],
   info: "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie Jurassic Park being portrayed much larger than their historical counterparts.",
-}, 99))
+}, 111))
 
 
   // If the dinosaur only has a single value for `mya`, they're considered alive if the `mya` value is equal to the given value or one less. For example, if a dinosaur has a `mya` value of `[29]`, the dinosaur's information will be returned if `29` is entered or `28` is entered.
