@@ -240,19 +240,19 @@ console.log(returnDinoValue(    {
   // ------------------------------------------------------
   // 2. Given a dinosaur object and an mya (Millions of years ago) value, return a boolean indicating whether it was alive during that time or not
 
-function returnBoolean(dinoObj, mya) {
+function isDinoAlive(dinoObj, mya) {
 
   // if (dinoObj.mya.length === 1) {
-  //   return dinoObj.mya === mya
+  //   return dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya
   // } else {
   //   return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
   // }
 
-  return dinoObj.mya.length === 1 ? dinoObj.mya === mya : dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
+  return dinoObj.mya.length === 1 ? dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya : dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
 
 }
 
-console.log(returnBoolean(    {
+console.log(isDinoAlive(    {
   dinosaurId: "qk1bNQA9_n",
   name: "Utahraptor",
   pronunciation: "YOO-tah-RAP-tor",
@@ -260,9 +260,9 @@ console.log(returnBoolean(    {
   diet: "carnivorous",
   lengthInMeters: 6,
   period: "Early Cretaceous",
-  mya: [112, 100],
+  mya: [120, 100],
   info: "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie Jurassic Park being portrayed much larger than their historical counterparts.",
-}, 111))
+}, 99))
 
 
   // If the dinosaur only has a single value for `mya`, they're considered alive if the `mya` value is equal to the given value or one less. For example, if a dinosaur has a `mya` value of `[29]`, the dinosaur's information will be returned if `29` is entered or `28` is entered.
