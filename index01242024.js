@@ -244,13 +244,13 @@ console.log(returnDinoValue(    {
 
 function isDinoAlive(dinoObj, mya) {
 
-  // if (dinoObj.mya.length === 1) {
-  //   return dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya
-  // } else {
-  //   return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
-  // }
+  if (dinoObj.mya.length === 1) {
+    return dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya; //<---- expression
+  } else {
+    return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya; //<---- expression
+  }
 
-  return dinoObj.mya.length === 1 ? dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya : dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya
+  // return dinoObj.mya.length === 1 ? dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya : dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya;
 
 }
 
@@ -271,19 +271,21 @@ console.log(isDinoAlive(    {
   // ------------------------------------------------------
   // 3. Given an array of dinosaurs and a key return a new array where each dinosaur object is replaced with the corresponding value of a specified key within each object. If no key is given or a wrong key is given, return the dinosaurIds
 
-function returnNewDinoValueArray (dinoArray, dinoKey) {
+function transformDinoArray (dinoArray, dinoKey) {
 
-  const copyDinoArray = [...dinoArray]
-  const newDinoArray = []
+  const copyDinoArray = [...dinoArray];
+  const newDinoArray = [];
 
   for (let dinoObj of copyDinoArray){
-    dinoObj[dinoKey] ? newDinoArray.push(dinoObj[dinoKey]) : newDinoArray.push(dinoObj.dinosaurId)
+    dinoObj[dinoKey] ? newDinoArray.push(dinoObj[dinoKey]) : newDinoArray.push(dinoObj.dinosaurId);
+    //let value = dinoObj[dinoKey] || dinoObj.dinosaurId;
+    //newDinoArray.push(value)
   }
   
-  return newDinoArray
-
-
+  return newDinoArray;
+  // return dinosaurs.map((dino) => dino[key] || dino.dinosaurId);
 }
 
-console.log(returnNewDinoValueArray(dinos, "diet"))
-console.log(returnNewDinoValueArray(dinos, "diet doctor pepper soda"))
+console.log(transformDinoArray(dinos, "diet"))
+console.log(transformDinoArray(dinos))
+console.log(transformDinoArray(dinos, "diet doctor pepper soda"))
