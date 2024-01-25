@@ -270,3 +270,20 @@ console.log(isDinoAlive(    {
   
   // ------------------------------------------------------
   // 3. Given an array of dinosaurs and a key return a new array where each dinosaur object is replaced with the corresponding value of a specified key within each object. If no key is given or a wrong key is given, return the dinosaurIds
+
+function returnNewDinoValueArray (dinoArray, dinoKey) {
+
+  const copyDinoArray = [...dinoArray]
+  const newDinoArray = []
+
+  for (let dinoObj of copyDinoArray){
+    dinoObj[dinoKey] ? newDinoArray.push(dinoObj[dinoKey]) : newDinoArray.push(dinoObj.dinosaurId)
+  }
+  
+  return newDinoArray
+
+
+}
+
+console.log(returnNewDinoValueArray(dinos, "diet"))
+console.log(returnNewDinoValueArray(dinos, "diet doctor pepper soda"))
