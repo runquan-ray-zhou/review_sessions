@@ -211,7 +211,30 @@ const dinos = [
   ];
   
   // 1. Given a dinosaur object and a key return the value of the corresponding key in the object. If no key is provided return the dinosaurId
-  
+
+function returnDinoValue(dinoObj, dinoKey) {
+
+  if (!dinoKey) {
+    return dinoObj.dinosaurId
+  } else {
+    return dinoObj[dinoKey]
+  }
+
+}
+
+console.log(returnDinoValue(    {
+  dinosaurId: "qk1bNQA9_n",
+  name: "Utahraptor",
+  pronunciation: "YOO-tah-RAP-tor",
+  meaningOfName: "Utah predator",
+  diet: "carnivorous",
+  lengthInMeters: 6,
+  period: "Early Cretaceous",
+  mya: [112, 100],
+  info: "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie Jurassic Park being portrayed much larger than their historical counterparts.",
+}, "name"))
+
+
   // ------------------------------------------------------
   // 2. Given a dinosaur object and an mya (Millions of years ago) value, return a boolean indicating whether it was alive during that time or not
   
