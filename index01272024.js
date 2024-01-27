@@ -59,6 +59,16 @@ let dinosaurNames = [
 
 // YOUR CODE HERE
 
+function returnValue (obj, key) {
+
+
+  return obj[key] ? obj[key] : `Error: ${key} does not exist!`
+
+}
+
+console.log(returnValue(countElements(dinosaurNames), "Velociraptor"))
+console.log(returnValue(countElements(dinosaurNames), "Funnysaurus"))
+
 // ------------------------------------------------------------------------
 
 // 3. Given a person object, update their street to the new given street. The person object will have these properties -
