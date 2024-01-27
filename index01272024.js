@@ -169,8 +169,7 @@ const companyOrganizationalStructure = {
 
   companyOrganizationalStructure.departments.development.head.office.employees[softwareEngineer3] = { name: "Ray Developer", desk: "B802"} 
 
-
-
+  companyOrganizationalStructure.departments.marketing.head.name = "Johann Marketer"
 
   // ------------------------------------------------------------------------
   
