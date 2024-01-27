@@ -174,7 +174,9 @@ const companyOrganizationalStructure = {
 
   console.log("c ---->",companyOrganizationalStructure.CEO.office.employees.executiveAssistant.name)
 
-  companyOrganizationalStructure.departments.development.head.office.employees["softwareEngineer3"] = { name: "Ray Developer", desk: "B802"} 
+  companyOrganizationalStructure.departments.development.head.office.employees.softwareEngineer3 = { name: "Ray Developer", desk: "B803"} 
+
+  console.log(companyOrganizationalStructure.departments.development.head.office.employees)
 
   companyOrganizationalStructure.departments.marketing.head.name = "Johann Marketer"
 
@@ -215,6 +217,7 @@ const companyOrganizationalStructure = {
         } else {
           return `${obj1} have same values as ${obj2}.`
         }
+        // obj1[key1] !== obj2[key2] ? `${obj1} does not have same values as ${obj2}.` : `${obj1} have same values as ${obj2}.`
       }
     }
   }
