@@ -5,11 +5,14 @@
 function countElements(arr) {
     let obj = {};
     for (let ele of arr) {
-        if(!obj[ele]) {
-            obj[ele] = 1;
-        } else {
-            obj[ele] ++;
-        }
+    //     if(!obj[ele]) {
+    //         obj[ele] = 1;
+    //     } else {
+    //         obj[ele] ++;
+    //     }
+    obj[ele] = obj[ele] + 1 || 1
+
+
     }
     return obj
 }
