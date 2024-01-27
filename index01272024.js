@@ -3,14 +3,18 @@
 // YOUR CODE HERE
 
 function countElements(arr) {
-    let obj = {};
-    for (let ele of arr) {
+    const obj = {};
+    for (let key of arr) {
     //     if(!obj[ele]) {
     //         obj[ele] = 1;
     //     } else {
     //         obj[ele] ++;
     //     }
-    obj[ele] = obj[ele] + 1 || 1
+    // console.log("key: ", key);
+    // console.log("object: ", obj);
+    // console.log("count: ", obj[key]);
+
+    obj[key] = obj[key] + 1 || 1
 
 
     }
@@ -18,7 +22,7 @@ function countElements(arr) {
 }
 
 
-let dinosaurNames = [
+const dinosaurNames = [
     "Tyrannosaurus",
     "Velociraptor",
     "Stegosaurus",
@@ -59,8 +63,7 @@ let dinosaurNames = [
 
 // YOUR CODE HERE
 
-function returnValue (obj, key) {
-
+function returnValue(obj, key) {
 
   return obj[key] ? obj[key] : `Error: ${key} does not exist!`
 
@@ -166,7 +169,7 @@ const companyOrganizationalStructure = {
 
   companyOrganizationalStructure.departments.development.head.office.employees[softwareEngineer3] = { name: "Ray Developer", desk: "B802"} 
 
-  
+
 
 
   // ------------------------------------------------------------------------
