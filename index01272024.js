@@ -73,7 +73,6 @@ console.log(returnValue(countElements(dinosaurNames), "Funnysaurus"))
 
 // 3. Given a person object, update their street to the new given street. The person object will have these properties -
 
-/*
 
 const person = {
   firstName: "John",
@@ -86,9 +85,13 @@ const person = {
   }
 };
 
-*/
 
 // YOUR CODE HERE
+
+person.address.street = "789 Tangent Alley"
+
+console.log(person)
+
 
 // ------------------------------------------------------------------------
 
