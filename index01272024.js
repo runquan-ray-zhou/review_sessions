@@ -210,18 +210,26 @@ const companyOrganizationalStructure = {
   // YOUR CODE HERE
   
   function compareObj(obj1, obj2) {
+    
+    if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+      return `${obj1} does not have same values as ${obj2}.`
+    }
+    
     for (let key1 in obj1) {
-      for (let key2 in obj2) {
-        if(obj1[key1] !== obj2[key2]){
-          return `${obj1} does not have same values as ${obj2}.`
-        } else {
-          return `${obj1} have same values as ${obj2}.`
-        }
-        // obj1[key1] !== obj2[key2] ? `${obj1} does not have same values as ${obj2}.` : `${obj1} have same values as ${obj2}.`
+      if (obj1[key1] !== obj2[key1]){
+        return `${obj1} does not have same values as ${obj2}.`
+      } else {
+        return `${obj1} have same values as ${obj2}.`
       }
+        // if(Object.values(obj2).includes(obj1[key1])){
+        //   return `${obj1} have same values as ${obj2}.`
+        // } else {
+        //   return `${obj1} does not have same values as ${obj2}.`
+        // }
     }
   }
 
   console.log(compareObj(countElements(dinosaurNames), companyOrganizationalStructure))
   console.log(compareObj(companyOrganizationalStructure, companyOrganizationalStructure))
+  console.log(compareObj(countElements(dinosaurNames), countElements(dinosaurNames)))
   // ------------------------------------------------------------------------
