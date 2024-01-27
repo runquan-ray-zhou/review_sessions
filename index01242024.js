@@ -246,11 +246,16 @@ function isDinoAlive(dinoObj, mya) {
 
   if (dinoObj.mya.length === 1) {
     return dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya; //<---- expression
-  } else {
-    return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya; //<---- expression
   }
+  return dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya; //<---- expression
 
   // return dinoObj.mya.length === 1 ? dinoObj.mya[0] === mya || (dinoObj.mya[0] - 1) === mya : dinoObj.mya[0] >= mya && dinoObj.mya[1] <= mya;
+
+//   return (
+//     dinoObj.mya[0] === mya ||
+//     dinoObj.mya[0] - 1 === mya ||
+//     (mya >= dinoObj.mya[1] && mya <= dinoObj.mya[0])
+//   );
 
 }
 
@@ -275,6 +280,7 @@ function transformDinoArray (dinoArray, dinoKey) {
 
   const copyDinoArray = [...dinoArray];
   const newDinoArray = [];
+
 
   for (let dinoObj of copyDinoArray){
     dinoObj[dinoKey] ? newDinoArray.push(dinoObj[dinoKey]) : newDinoArray.push(dinoObj.dinosaurId);
