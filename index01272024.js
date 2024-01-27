@@ -65,12 +65,19 @@ const dinosaurNames = [
 
 function returnValue(obj, key) {
 
-  return obj[key] ? obj[key] : `Error: ${key} does not exist!`
+  return obj[key] ? `The value to ${key} is ${obj[key]}` : `Error: ${key} does not exist!`
+
+  // return obj[key] || `Error: ${key} does not exist!` short circuiting. Return the left side if it's true/truth, otherwise return the right
+
+  // check if the property exists in the object by passing it the key
+    // if the property exists we return the value
+    // if it does not exist we return an error message
 
 }
 
 console.log(returnValue(countElements(dinosaurNames), "Velociraptor"))
 console.log(returnValue(countElements(dinosaurNames), "Funnysaurus"))
+console.log(returnValue(countElements(dinosaurNames), ))
 
 // ------------------------------------------------------------------------
 
@@ -185,6 +192,14 @@ const companyOrganizationalStructure = {
   // 6. Write a function that takes an object as it's only parameter and logs each property to the console. The function ONLY LOGS
   
   // YOUR CODE HERE
+
+  function logObject(obj){
+    for (let key in obj) {
+      console.log(key)
+    }
+  }
+
+  logObject(companyOrganizationalStructure)
   
   // ------------------------------------------------------------------------
   
@@ -192,4 +207,18 @@ const companyOrganizationalStructure = {
   
   // YOUR CODE HERE
   
+  function compareObj(obj1, obj2) {
+    for (let key1 in obj1) {
+      for (let key2 in obj2) {
+        if(obj1[key1] !== obj2[key2]){
+          return `${obj1} does not have same values as ${obj2}.`
+        } else {
+          return `${obj1} have same values as ${obj2}.`
+        }
+      }
+    }
+  }
+
+  console.log(compareObj(countElements(dinosaurNames), companyOrganizationalStructure))
+  console.log(compareObj(companyOrganizationalStructure, companyOrganizationalStructure))
   // ------------------------------------------------------------------------
