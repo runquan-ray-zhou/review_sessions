@@ -2,6 +2,50 @@
 
 // YOUR CODE HERE
 
+function countElements(arr) {
+    let obj = {};
+    for (let ele of arr) {
+        if(!obj[ele]) {
+            obj[ele] = 1;
+        } else {
+            obj[ele] ++;
+        }
+    }
+    return obj
+}
+
+
+let dinosaurNames = [
+    "Tyrannosaurus",
+    "Velociraptor",
+    "Stegosaurus",
+    "Triceratops",
+    "Brachiosaurus",
+    "Tyrannosaurus",
+    "Velociraptor",
+    "Stegosaurus",
+    "Allosaurus",
+    "Ankylosaurus",
+    "Spinosaurus",
+    "Pteranodon",
+    "Parasaurolophus",
+    "Dilophosaurus",
+    "Iguanodon",
+    "Archaeopteryx",
+    "Carnotaurus",
+    "Compsognathus",
+    "Pachycephalosaurus",
+    "Dimetrodon",
+    "Tyrannosaurus",
+    "Velociraptor",
+    "Stegosaurus",
+    "Triceratops",
+    "Tyrannosaurus",
+    "Velociraptor",
+
+  ];
+
+  console.log(countElements(dinosaurNames));
 // Example:
 // ["apple", "orange", "apple", "banana", "apple", "orange"]
 // { apple: 3, orange: 2, banana: 1}
