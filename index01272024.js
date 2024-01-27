@@ -158,6 +158,17 @@ const companyOrganizationalStructure = {
   
   // YOUR CODE HERE
   
+  console.log("a ---->",companyOrganizationalStructure.departments.development.head.office.employees.softwareEngineer2.desk)
+
+  console.log("b ---->",companyOrganizationalStructure.departments.marketing.head.office.location)
+
+  console.log("c ---->",companyOrganizationalStructure.CEO.office.employees.executiveAssistant.name)
+
+  companyOrganizationalStructure.departments.development.head.office.employees[softwareEngineer3] = { name: "Ray Developer", desk: "B802"} 
+
+  
+
+
   // ------------------------------------------------------------------------
   
   // 5. Given the following variables, create a new object. the key variable should be the key and the value variable should be it's corresponding value. You have to use the variables!
