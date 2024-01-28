@@ -83,7 +83,7 @@ function returnLengthArray(arr) {
     
     let outputArray = [];
 
-    for (let str of arr) {
+    for (let str of arr) {  // use const
         if (str.length > 5) {
             outputArray.push(str.length);
         }
@@ -92,12 +92,61 @@ function returnLengthArray(arr) {
     return outputArray
 
     // return arr.filter(str => str.length > 5).map(str => str.length)
+
+    // return arr.map(str => str.length).filter(num => num > 5)
+
+    // return arr.reduce((acc, str) => {
+    //     if (str.length > 5) {
+    //         acc.push(str.length);
+    //     }
+    //     return acc;
+    // },[])
 }
+
+// function myMap(arr, callback) {
+//     const newArr = [];
+
+//     for (let el of arr) {
+//         newArr.push(callback())
+//     }
+
+//     return newArr;
+// }
+
+// function myFilter(arr, callback) {
+//     const newArr = [];
+
+//     for (let el of arr) {
+//         if (callback()) {
+//             newArr.push(el);
+//         }
+//     }
+//     return newArr
+// }
 
 console.log(returnLengthArray(strArray));
 
 
-// 4. Write a function that takes an array of numbers and returns the sum of all even numebrs
+// 4. Write a function that takes an array of numbers and returns the sum of all even numbers
+
+const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function sumEvenNum(arr) {
+    let sum = 0;
+
+    for (let num of arr) {
+        if (num % 2 === 0) {
+            sum += num
+        }
+    }
+    
+    return sum;
+}
+
+
+console.log(sumEvenNum(numArray))
+
+
 
 // 5. Write a function that takes an array of numbers and returns the min num
 
