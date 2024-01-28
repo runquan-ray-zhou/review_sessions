@@ -1,6 +1,30 @@
 // Acc Pattern
 
+// It accumulates in a for loop.
+// It accumulates everything in an array to a single value.
+// A function returns a single output, never return outside a function.
+// All native array methods uses the accumulator pattern
+// Steps to use the acc pattern
+// 1. initialize a variable to accumulate into, with a default value.  can be string, empty array, empty object, zero.
+    // 3.Create a for loop and in the for loop - Accumulate
+// 2. at the end of the function, return the variable
+
+// Find the max value in an array - 
+
+// function findMax(arr) {
+//     return Math.max(...arr) 
+// }
+
+// console.log(findMax([1, 3, 2]));
+
 // Iterative Native Array Methods
+
+// 1. .filter - filter out what you specify to it in the return value of the callback function and returns a new array.
+// 2. .every - returns a boolean based on the specified condition if all the elements return true.
+// 3. .some - returns a boolean based on the specified condition if at least one element returns true.
+// 4. .find - returns the first element that returns true from a specified condition.
+// 5. .map - returns a new array where each element is transformed base on te return value of the callback.
+// 6. .reduce - can do multiple functions. can emulate all the other native array methods.
 
 // For each of the following exercises, 
 // 1. write them using a for loop first
