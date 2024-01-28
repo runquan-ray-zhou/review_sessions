@@ -10,22 +10,27 @@
 // 1. Write a function that takes in an array of strings and returns a new array where each string is replaced by it's length
 // ["hello", "world"] => [5, 5] 
 
-function transformArray(arr) {
+// function transformArray(arr) {
 
-    let outputArray = [];
+//     let outputArray = [];
 
-    for (let str of arr) {
-        outputArray.push(str.length);
-    }
+//     for (let str of arr) {
+//         outputArray.push(str.length);
+//     }
 
-    return outputArray;
-}
+//     return outputArray;
+// }
+
+
 
 const str = "Write a function that takes in an array of strings and returns a new array where each string is replaced by it's length";
 
 const strArray = str.split(" ");
 
-console.log(transformArray(strArray));
+const outputArray = strArray.map(str => str.length);
+
+// console.log(transformArray(strArray));
+console.log(outputArray);
 
 // 2. Write a function that takes an array of strings and returns an array of strings longer than 5 characters (spaces count)
 
