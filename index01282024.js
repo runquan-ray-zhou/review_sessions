@@ -60,20 +60,22 @@ console.log(transformArray(strArray));
 
 // 2. Write a function that takes an array of strings and returns an array of strings longer than 5 characters (spaces count)
 
-// function returnLongerThanFive(arr) {
+function returnLongerThanFive(arr) {
 
-//     let outputArray = [];
+    // let outputArray = [];
 
-//     for (let str of arr) {
-//         if (str.length > 5) {
-//             outputArray.push(str);
-//         }
-//     }
+    // for (let str of arr) {
+    //     if (str.length > 5) {
+    //         outputArray.push(str);
+    //     }
+    // }
 
-//     return outputArray;
-// }
+    // return outputArray;
 
-// console.log(returnLongerThanFive(strArray));
+    return arr.filter(str => str.length > 5)
+}
+
+console.log(returnLongerThanFive(strArray));
 
 // 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
 
