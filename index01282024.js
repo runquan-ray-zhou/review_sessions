@@ -79,6 +79,24 @@ console.log(returnLongerThanFive(strArray));
 
 // 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
 
+function returnLengthArray(arr) {
+    
+    let outputArray = [];
+
+    for (let str of arr) {
+        if (str.length > 5) {
+            outputArray.push(str.length);
+        }
+    }
+
+    return outputArray
+
+    // return arr.filter(str => str.length > 5).map(str => str.length)
+}
+
+console.log(returnLengthArray(strArray));
+
+
 // 4. Write a function that takes an array of numbers and returns the sum of all even numebrs
 
 // 5. Write a function that takes an array of numbers and returns the min num
