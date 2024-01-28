@@ -10,16 +10,18 @@
 // 1. Write a function that takes in an array of strings and returns a new array where each string is replaced by it's length
 // ["hello", "world"] => [5, 5] 
 
-// function transformArray(arr) {
+function transformArray(arr) {
 
-//     let outputArray = [];
+//     let outputArray = []; // initialize accumulator
 
-//     for (let str of arr) {
-//         outputArray.push(str.length);
+//     for (let str of arr) { // loop
+//         outputArray.push(str.length); // transform the accumulator
 //     }
 
-//     return outputArray;
-// }
+//     return outputArray; // return the accumulator
+
+    return arr.map(str => str.length);
+}
 
 
 
@@ -27,27 +29,27 @@ const str = "Write a function that takes in an array of strings and returns a ne
 
 const strArray = str.split(" ");
 
-const outputArray = strArray.map(str => str.length);
+// const outputArray = strArray.map(str => str.length);
 
-// console.log(transformArray(strArray));
-console.log(outputArray);
+console.log(transformArray(strArray));
+// console.log(outputArray);
 
 // 2. Write a function that takes an array of strings and returns an array of strings longer than 5 characters (spaces count)
 
-function returnLongerThanFive(arr) {
+// function returnLongerThanFive(arr) {
 
-    let outputArray = [];
+//     let outputArray = [];
 
-    for (let str of arr) {
-        if (str.length > 5) {
-            outputArray.push(str);
-        }
-    }
+//     for (let str of arr) {
+//         if (str.length > 5) {
+//             outputArray.push(str);
+//         }
+//     }
 
-    return outputArray;
-}
+//     return outputArray;
+// }
 
-console.log(returnLongerThanFive(strArray));
+// console.log(returnLongerThanFive(strArray));
 
 // 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
 
