@@ -24,7 +24,7 @@
 // 3. .some - returns a boolean based on the specified condition if at least one element returns true.
 // 4. .find - returns the first element that returns true from a specified condition.
 // 5. .map - returns a new array where each element is transformed base on te return value of the callback.
-// 6. .reduce - can do multiple functions. can emulate all the other native array methods.
+// 6. .reduce - can do multiple functions. can emulate all the other native array methods. Sum up all elements
 
 // For each of the following exercises, 
 // 1. write them using a for loop first
@@ -131,16 +131,28 @@ console.log(returnLengthArray(strArray));
 
 const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-function sumEvenNum(arr) {
-    let sum = 0;
+// filterArray = [2, 4, 6, 8, 10]
 
-    for (let num of arr) {
-        if (num % 2 === 0) {
-            sum += num
-        }
-    }
-    
-    return sum;
+function sumEvenNum(arr) {
+    // let sum = 0;
+
+    // for (let num of arr) {
+    //     if (num % 2 === 0) {
+    //         sum += num
+    //     }
+    // }
+    // return sum;
+
+    const sum = arr.reduce((sum, num) => (num % 2 === 0 ? sum + num : sum))
+
+    // const sum = arr.reduce((accumulator, currentValue) => {
+    //     if (currentValue % 2 === 0) {
+    //         accumulator + currentValue
+    //     }
+    //     return accumulator
+    // }, 0)
+
+    return sum
 }
 
 
@@ -150,4 +162,35 @@ console.log(sumEvenNum(numArray))
 
 // 5. Write a function that takes an array of numbers and returns the min num
 
+function findMin(arr) {
+
+    return Math.min(...arr);
+}
+
 // 6. Write a function that takes in a string and returns the character that appears the most times (only letters count)
+
+function returnChar(str) {
+
+    let strArray = str.split("").filter(char => !(char.toUpperCase() === char.toLowerCase()))
+
+    let letterObj = {};
+
+    for (let letter of strArray) {
+        letterObj[letter] = letterObj[letter] + 1 || 1
+    }
+
+    let targetLetter;
+    let mostCount = 0
+    for (let lett in letterObj) {
+        if (letterObj[lett] > mostCount){
+            mostCount = letterObj[lett]
+            targetLetter = lett
+        }
+    }
+
+    return targetLetter
+    
+}
+
+console.log(returnChar("(summary, num) => (number % 2 === 0 ? summary + num : summary)"))
+
